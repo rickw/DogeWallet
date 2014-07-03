@@ -28,10 +28,10 @@
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	
 	NSString *path = [self getServerPath];
 	if ([[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:NO]) {
@@ -58,10 +58,6 @@
 -(void) viewWillDisappear:(BOOL)animated {
 	if (server)
 		[self doneTapped:nil];
-}
-
--(NSString *) getServerPath {
-	return [NSString stringWithFormat:@"%@/server.plist", [[BSFileHelper sharedHelper] getDocumentsDirectory]];
 }
 
 -(void) helpTapped:(id)sender {
@@ -138,7 +134,7 @@
 		cell.textLabel.text = @"Path";
 		
 		pathField = [self createTextField];
-		pathField.text = @"~/";
+		pathField.text = @"~/dogecoin/src";
 		[cell.contentView addSubview:pathField];
 		
 		if (server)
@@ -182,10 +178,12 @@
 	
 	
 	NSDictionary *serverInfo = @{@"host": hostField.text, @"user": userField.text, @"pass": passField.text, @"path": pathField.text, @"encrypted": [NSNumber numberWithBool:encryptedSwitch.on]};
-	
-	NSString *path = [NSString stringWithFormat:@"%@/server.plist", [[BSFileHelper sharedHelper] getDocumentsDirectory]];
-	
-	[serverInfo writeToFile:path atomically:YES];
+
+    BOOL success = [serverInfo writeToFile:[self getServerPath] atomically:YES];
+
+    if (!success) {
+        NSLog(@"BLOODY HELL");
+    }
 	
 	[self.delegate serverViewDidClose:self];
 }

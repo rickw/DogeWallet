@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BSFileHelper.h"
+#import "NSObject+FilePaths.h"
 
 @class ServerAddView;
 

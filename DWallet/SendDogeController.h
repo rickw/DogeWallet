@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <NMSSH/NMSSH.h>
 #import "ZBarSDK.h"
-#import "BSFileHelper.h"
+#import "NSObject+FilePaths.h"
 
 @interface SendDogeController : UITableViewController <ZBarReaderDelegate, UIAlertViewDelegate> {
     UITextField *addressField;

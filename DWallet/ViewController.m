@@ -72,10 +72,6 @@
     [self createBalanceLabel];
 }
 
--(NSString *) getServerPath {
-	return [NSString stringWithFormat:@"%@/server.plist", [[BSFileHelper sharedHelper] getDocumentsDirectory]];
-}
-
 -(void) viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
 	

@@ -44,10 +44,6 @@
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(NSString *) getServerPath {
-	return [NSString stringWithFormat:@"%@/server.plist", [[BSFileHelper sharedHelper] getDocumentsDirectory]];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BSFileHelper.h"
 #import "ServerAddView.h"
+#import "NSObject+FilePaths.h"
 
 @interface InfoViewController : UITableViewController <ServerAddDelegate> {
 	NSDictionary *server;

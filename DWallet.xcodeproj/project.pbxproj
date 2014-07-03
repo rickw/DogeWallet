@@ -20,7 +20,6 @@
 		021944B318A294CD0044EC29 /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = 021944A918A294CD0044EC29 /* split.c */; };
 		021944B418A294CD0044EC29 /* UIImage+MDQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 021944AC18A294CD0044EC29 /* UIImage+MDQRCode.m */; };
 		021944B818A2C3BA0044EC29 /* ServerAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 021944B718A2C3BA0044EC29 /* ServerAddView.m */; };
-		021944BB18A2C8390044EC29 /* BSFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 021944BA18A2C8390044EC29 /* BSFileHelper.m */; };
 		02A9233018A2F953009D02E6 /* TransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A9232F18A2F953009D02E6 /* TransactionCell.m */; };
 		02A9233318A3043B009D02E6 /* info-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 02A9233118A3043B009D02E6 /* info-25.png */; };
 		02A9233418A3043B009D02E6 /* info-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 02A9233218A3043B009D02E6 /* info-32.png */; };
@@ -44,7 +43,6 @@
 		02EE7B6B18A1F10E00174DAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02EE7B4D18A1F10E00174DAF /* UIKit.framework */; };
 		02EE7B7318A1F10E00174DAF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02EE7B7118A1F10E00174DAF /* InfoPlist.strings */; };
 		02EE7B7518A1F10E00174DAF /* DWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EE7B7418A1F10E00174DAF /* DWalletTests.m */; };
-		02EE7B7F18A1F12600174DAF /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02EE7B7E18A1F12600174DAF /* NMSSH.framework */; };
 		02EE7B8118A1F13A00174DAF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 02EE7B8018A1F13A00174DAF /* libz.dylib */; };
 		02EE7B8318A1F14000174DAF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02EE7B8218A1F14000174DAF /* CFNetwork.framework */; };
 		02EE7BA718A1F75800174DAF /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02EE7BA118A1F75800174DAF /* libzbar.a */; };
@@ -59,6 +57,8 @@
 		02EE7BB518A1F79000174DAF /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 02EE7BB418A1F79000174DAF /* libiconv.dylib */; };
 		02EE7BB818A1F80E00174DAF /* SendDogeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EE7BB718A1F80E00174DAF /* SendDogeController.m */; };
 		02EE7BBA18A2045F00174DAF /* qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 02EE7BB918A2045F00174DAF /* qrcode.png */; };
+		1DDF1DAF1964E80A00C05B00 /* NSObject+FilePaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF1DAE1964E80A00C05B00 /* NSObject+FilePaths.m */; };
+		1DDF1DB01964FDCC00C05B00 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02EE7B7E18A1F12600174DAF /* NMSSH.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,8 +95,6 @@
 		021944AC18A294CD0044EC29 /* UIImage+MDQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MDQRCode.m"; sourceTree = "<group>"; };
 		021944B618A2C3BA0044EC29 /* ServerAddView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerAddView.h; sourceTree = "<group>"; };
 		021944B718A2C3BA0044EC29 /* ServerAddView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerAddView.m; sourceTree = "<group>"; };
-		021944B918A2C8390044EC29 /* BSFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSFileHelper.h; sourceTree = "<group>"; };
-		021944BA18A2C8390044EC29 /* BSFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSFileHelper.m; sourceTree = "<group>"; };
 		02A9232E18A2F953009D02E6 /* TransactionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionCell.h; sourceTree = "<group>"; };
 		02A9232F18A2F953009D02E6 /* TransactionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionCell.m; sourceTree = "<group>"; };
 		02A9233118A3043B009D02E6 /* info-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-25.png"; sourceTree = "<group>"; };
@@ -163,6 +161,8 @@
 		02EE7BB618A1F80E00174DAF /* SendDogeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendDogeController.h; sourceTree = "<group>"; };
 		02EE7BB718A1F80E00174DAF /* SendDogeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendDogeController.m; sourceTree = "<group>"; };
 		02EE7BB918A2045F00174DAF /* qrcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode.png; sourceTree = "<group>"; };
+		1DDF1DAD1964E80A00C05B00 /* NSObject+FilePaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FilePaths.h"; sourceTree = "<group>"; };
+		1DDF1DAE1964E80A00C05B00 /* NSObject+FilePaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FilePaths.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DDF1DB01964FDCC00C05B00 /* NMSSH.framework in Frameworks */,
 				02A9233E18A31535009D02E6 /* CoreImage.framework in Frameworks */,
 				02EE7B4A18A1F10E00174DAF /* Foundation.framework in Frameworks */,
 				02EE7B4C18A1F10E00174DAF /* CoreGraphics.framework in Frameworks */,
@@ -181,7 +182,6 @@
 				02EE7BB518A1F79000174DAF /* libiconv.dylib in Frameworks */,
 				02EE7B8318A1F14000174DAF /* CFNetwork.framework in Frameworks */,
 				02EE7B8118A1F13A00174DAF /* libz.dylib in Frameworks */,
-				02EE7B7F18A1F12600174DAF /* NMSSH.framework in Frameworks */,
 				02EE7BA718A1F75800174DAF /* libzbar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,10 +311,10 @@
 				02E77B8B18A43812005B0B73 /* down4-100.png */,
 				02EE7B5818A1F10E00174DAF /* AppDelegate.h */,
 				02EE7B5918A1F10E00174DAF /* AppDelegate.m */,
-				021944B918A2C8390044EC29 /* BSFileHelper.h */,
-				021944BA18A2C8390044EC29 /* BSFileHelper.m */,
 				02A9232E18A2F953009D02E6 /* TransactionCell.h */,
 				02A9232F18A2F953009D02E6 /* TransactionCell.m */,
+				1DDF1DAD1964E80A00C05B00 /* NSObject+FilePaths.h */,
+				1DDF1DAE1964E80A00C05B00 /* NSObject+FilePaths.m */,
 				02A9232D18A2F924009D02E6 /* ViewControllers */,
 				02EE7B5B18A1F10E00174DAF /* Main.storyboard */,
 				02EE7B6118A1F10E00174DAF /* Images.xcassets */,
@@ -463,6 +463,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Brad Slayter";
 				TargetAttributes = {
+					02EE7B4518A1F10E00174DAF = {
+						DevelopmentTeam = TM7482QQ7Q;
+					};
 					02EE7B6618A1F10E00174DAF = {
 						TestTargetID = 02EE7B4518A1F10E00174DAF;
 					};
@@ -537,10 +540,10 @@
 				021944B218A294CD0044EC29 /* rscode.c in Sources */,
 				02EE7B6018A1F10E00174DAF /* ViewController.m in Sources */,
 				021944AE18A294CD0044EC29 /* mask.c in Sources */,
+				1DDF1DAF1964E80A00C05B00 /* NSObject+FilePaths.m in Sources */,
 				021944AF18A294CD0044EC29 /* qrencode.c in Sources */,
 				02A9233718A304F7009D02E6 /* InfoViewController.m in Sources */,
 				021944B018A294CD0044EC29 /* qrinput.c in Sources */,
-				021944BB18A2C8390044EC29 /* BSFileHelper.m in Sources */,
 				021944B318A294CD0044EC29 /* split.c in Sources */,
 				02EE7B5A18A1F10E00174DAF /* AppDelegate.m in Sources */,
 				02EE7B5618A1F10E00174DAF /* main.m in Sources */,
@@ -668,22 +671,26 @@
 		02EE7B7918A1F10E00174DAF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = armv7;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/slayter/Dropbox/iOS\\ Projects/DWallet",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DWallet/DWallet-Prefix.pch";
 				INFOPLIST_FILE = "DWallet/DWallet-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/slayter/Dropbox/iOS\\ Projects/DWallet/DWallet/ZBarSDK",
+					"$(SRCROOT)/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -692,22 +699,26 @@
 		02EE7B7A18A1F10E00174DAF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = armv7;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/slayter/Dropbox/iOS\\ Projects/DWallet",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DWallet/DWallet-Prefix.pch";
 				INFOPLIST_FILE = "DWallet/DWallet-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/slayter/Dropbox/iOS\\ Projects/DWallet/DWallet/ZBarSDK",
+					"$(SRCROOT)/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};

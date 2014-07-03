@@ -42,7 +42,7 @@
 	UIBarButtonItem *sendButton = [[UIBarButtonItem alloc] initWithTitle:@"Send" style:UIBarButtonItemStyleDone target:self action:@selector(sendTransaction:)];
 	self.navigationItem.rightBarButtonItem = sendButton;
     
-    server = [[NSDictionary alloc] initWithContentsOfFile:[[[BSFileHelper sharedHelper] getDocumentsDirectory] stringByAppendingPathComponent:@"server.plist"]];
+    server = [[NSDictionary alloc] initWithContentsOfFile:[self getServerPath]];
 }
 
 -(void) cancelTapped:(id)sender {

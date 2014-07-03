@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <NMSSH/NMSSH.h>
-#import "BSFileHelper.h"
 #import "SendDogeController.h"
 #import "ServerAddView.h"
 #import "InfoViewController.h"
 #import "TransactionViewController.h"
 #import "TransactionCell.h"
 #import "UIImage+MDQRCode.h"
+#import "NSObject+FilePaths.h"
 
 @interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate, ServerAddDelegate> {
 	NSMutableArray *transactions;
