@@ -42,7 +42,7 @@
 @end
 
 @interface ViewController ()
-
+@property (nonatomic, strong)   NSNumberFormatter *formatter;
 @end
 
 @implementation ViewController
@@ -67,7 +67,14 @@
 	
 	UIBarButtonItem *infoBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"info-25.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(infoTapped:)];
     self.navigationItem.leftBarButtonItem = infoBtn;
-	
+
+    // use the same format throughout
+    _formatter = [[NSNumberFormatter alloc] init];
+    _formatter.numberStyle = NSNumberFormatterDecimalStyle;
+    _formatter.maximumFractionDigits = 2;
+    _formatter.minimumFractionDigits = 2;
+    _formatter.roundingMode = NSNumberFormatterRoundHalfUp;
+
     [self createTableView];
     [self createBalanceLabel];
 }
@@ -317,15 +324,15 @@
 	if (cell == nil)
 		cell = [[TransactionCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
 	
-	float amount = [[[transactions objectAtIndex:indexPath.row] objectForKey:@"amount"] floatValue];
+	NSNumber *amount = [[transactions objectAtIndex:indexPath.row] objectForKey:@"amount"];
 	cell.addressLabel.text = (amount < 0) ? @"Sent Doge" : @"Recieved Doge";
 	
 	if (amount < 0) {
-		float fee = [[[transactions objectAtIndex:indexPath.row] objectForKey:@"fee"] floatValue];
-		amount += fee;
-        cell.amountLabel.text = [NSString stringWithFormat:@"%.2f Ð", amount];
+		NSNumber *fee = [[transactions objectAtIndex:indexPath.row] objectForKey:@"fee"];
+		amount = [NSNumber numberWithDouble:amount.floatValue + fee.floatValue];
+        cell.amountLabel.text = [NSString stringWithFormat:@"-%@ Ð", [_formatter stringFromNumber:amount]];
 	} else {
-		cell.amountLabel.text = [NSString stringWithFormat:@"%.2f Ð", amount];
+		cell.amountLabel.text = [NSString stringWithFormat:@"%@ Ð", [_formatter stringFromNumber:amount]];
 	}
 	
 	int conf = [[[transactions objectAtIndex:indexPath.row] objectForKey:@"confirmations"] intValue];
@@ -335,7 +342,7 @@
 		cell.unconfirmedLabel.text = @"";
 	}
 	
-	if (amount > 0.0f)
+	if (amount.floatValue > 0.0f)
 		cell.amountLabel.textColor = [UIColor colorWithRed:0.3013f green:0.5109f blue:0.1878f alpha:1.0f];
 	else
 		cell.amountLabel.textColor = [UIColor redColor];
@@ -357,6 +364,7 @@
     
     TransactionViewController *controller = [[TransactionViewController alloc] initWithStyle:UITableViewStyleGrouped];
     controller.transaction = transaction;
+    controller.formatter = _formatter;
     
     [self.navigationController pushViewController:controller animated:YES];
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -402,8 +410,9 @@
 	else
 		NSLog(@"[+] Recieved balance: %@", response);
 	
-	float balance = [response floatValue];
-	self.balanceLabel.text = [NSString stringWithFormat:@"%.2f Ð", balance];
+	NSNumber *balance = [NSNumber numberWithFloat:response.floatValue];
+    NSLog(@"r = %@ b = %@", response, balance);
+	self.balanceLabel.text = [NSString stringWithFormat:@"%@ Ð", [_formatter stringFromNumber:balance]];
 	
 	// get address
 	command = [NSString stringWithFormat:@"cd %@; ./dogecoind listreceivedbyaddress 0 true", path];

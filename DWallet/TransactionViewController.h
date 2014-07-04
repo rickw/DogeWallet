@@ -11,5 +11,5 @@
 @interface TransactionViewController : UITableViewController
 
 @property (nonatomic, strong) NSDictionary *transaction;
-
+@property (nonatomic, strong) NSNumberFormatter *formatter;
 @end
