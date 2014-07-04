@@ -34,6 +34,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.navigationItem.title = @"Transaction Details";
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,14 +80,12 @@
         cell.detailTextLabel.text = [self.transaction objectForKey:@"address"];
     } else if (indexPath.row == 1) {
         cell.textLabel.text = @"Amount";
-        
-        float amount = [[self.transaction objectForKey:@"amount"] floatValue];
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f", amount];
+
+        cell.detailTextLabel.text = [_formatter stringFromNumber:[_transaction objectForKey:@"amount"]];
     } else if (indexPath.row == 2) {
         cell.textLabel.text = @"Fee";
-        
-        float fee = [[self.transaction objectForKey:@"fee"] floatValue];
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f", fee];
+
+        cell.detailTextLabel.text = [_formatter stringFromNumber:[_transaction objectForKey:@"fee"]];
     } else if (indexPath.row == 3) {
 		cell.textLabel.text = @"Confirmations";
         
