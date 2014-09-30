@@ -325,7 +325,7 @@
 		cell = [[TransactionCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
 	
 	NSNumber *amount = [[transactions objectAtIndex:indexPath.row] objectForKey:@"amount"];
-	cell.addressLabel.text = (amount < 0) ? @"Sent Doge" : @"Recieved Doge";
+	cell.addressLabel.text = (amount.floatValue < 0.0) ? @"Sent Doge" : @"Recieved Doge";
 	
 	if (amount < 0) {
 		NSNumber *fee = [[transactions objectAtIndex:indexPath.row] objectForKey:@"fee"];
@@ -432,7 +432,7 @@
 	}
 	
 	// get transactions
-	command = [NSString stringWithFormat:@"cd %@; ./dogecoind listtransactions \"*\" 100", path];
+	command = [NSString stringWithFormat:@"cd %@; ./dogecoind listtransactions \"*\" 1000", path];
 	
 	response = [self.ssh.channel execute:command error:&error];
 	if (error)
