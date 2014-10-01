@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AccessViewController.h"
 
 @implementation AppDelegate
 
@@ -20,8 +21,7 @@
 	
 	//NSLog(@"%@", error.localizedDescription);
 	
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.window.rootViewController];
-	self.window.rootViewController = nav;
+    
     
 	[[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.862745098039216 green:0.807843137254902 blue:0.63921568627451 alpha:1.0]];
 	[[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:0.172549019607843 green:0.172549019607843 blue:0.172549019607843 alpha:1.0]];
@@ -34,6 +34,9 @@
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [(UINavigationController *)self.window.rootViewController popViewControllerAnimated:NO];
+    });
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
@@ -50,6 +53,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

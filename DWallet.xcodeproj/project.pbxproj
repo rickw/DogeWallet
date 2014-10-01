@@ -57,6 +57,9 @@
 		02EE7BB518A1F79000174DAF /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 02EE7BB418A1F79000174DAF /* libiconv.dylib */; };
 		02EE7BB818A1F80E00174DAF /* SendDogeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EE7BB718A1F80E00174DAF /* SendDogeController.m */; };
 		02EE7BBA18A2045F00174DAF /* qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 02EE7BB918A2045F00174DAF /* qrcode.png */; };
+		1D43736D19DB81C0006E04CB /* CoverImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D43736C19DB81C0006E04CB /* CoverImage@2x.png */; };
+		1D43736F19DB81E0006E04CB /* TouchIDButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D43736E19DB81E0006E04CB /* TouchIDButton@2x.png */; };
+		1D43737319DB83F7006E04CB /* AccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D43737119DB83F7006E04CB /* AccessViewController.m */; };
 		1DDF1DAF1964E80A00C05B00 /* NSObject+FilePaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF1DAE1964E80A00C05B00 /* NSObject+FilePaths.m */; };
 		1DDF1DB01964FDCC00C05B00 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02EE7B7E18A1F12600174DAF /* NMSSH.framework */; };
 /* End PBXBuildFile section */
@@ -161,6 +164,10 @@
 		02EE7BB618A1F80E00174DAF /* SendDogeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendDogeController.h; sourceTree = "<group>"; };
 		02EE7BB718A1F80E00174DAF /* SendDogeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendDogeController.m; sourceTree = "<group>"; };
 		02EE7BB918A2045F00174DAF /* qrcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode.png; sourceTree = "<group>"; };
+		1D43736C19DB81C0006E04CB /* CoverImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CoverImage@2x.png"; sourceTree = "<group>"; };
+		1D43736E19DB81E0006E04CB /* TouchIDButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TouchIDButton@2x.png"; sourceTree = "<group>"; };
+		1D43737019DB83F7006E04CB /* AccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessViewController.h; sourceTree = "<group>"; };
+		1D43737119DB83F7006E04CB /* AccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessViewController.m; sourceTree = "<group>"; };
 		1DDF1DAD1964E80A00C05B00 /* NSObject+FilePaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FilePaths.h"; sourceTree = "<group>"; };
 		1DDF1DAE1964E80A00C05B00 /* NSObject+FilePaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FilePaths.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -257,6 +264,8 @@
 				02A9233618A304F7009D02E6 /* InfoViewController.m */,
 				02062F6018A33E8200C67D0D /* TransactionViewController.h */,
 				02062F6118A33E8200C67D0D /* TransactionViewController.m */,
+				1D43737019DB83F7006E04CB /* AccessViewController.h */,
+				1D43737119DB83F7006E04CB /* AccessViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -306,6 +315,8 @@
 				02062F5F18A33ADA00C67D0D /* Assets */,
 				021944B518A294D20044EC29 /* QRGen */,
 				02EE7B8918A1F75800174DAF /* ZBarSDK */,
+				1D43736C19DB81C0006E04CB /* CoverImage@2x.png */,
+				1D43736E19DB81E0006E04CB /* TouchIDButton@2x.png */,
 				02E77B8918A43812005B0B73 /* down4-50.png */,
 				02E77B8A18A43812005B0B73 /* down4-75.png */,
 				02E77B8B18A43812005B0B73 /* down4-100.png */,
@@ -508,9 +519,11 @@
 				02EE7BA918A1F75800174DAF /* zbar-help.html in Resources */,
 				02E77B8E18A43812005B0B73 /* down4-100.png in Resources */,
 				02E77B8C18A43812005B0B73 /* down4-50.png in Resources */,
+				1D43736D19DB81C0006E04CB /* CoverImage@2x.png in Resources */,
 				02EE7BA818A1F75800174DAF /* zbar-back.png in Resources */,
 				02EE7BAA18A1F75800174DAF /* zbar-helpicons.png in Resources */,
 				02062F6818A35AEF00C67D0D /* enter-25.png in Resources */,
+				1D43736F19DB81E0006E04CB /* TouchIDButton@2x.png in Resources */,
 				02062F6618A3469E00C67D0D /* info.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,6 +549,7 @@
 				021944B818A2C3BA0044EC29 /* ServerAddView.m in Sources */,
 				021944B118A294CD0044EC29 /* qrspec.c in Sources */,
 				021944AD18A294CD0044EC29 /* bitstream.c in Sources */,
+				1D43737319DB83F7006E04CB /* AccessViewController.m in Sources */,
 				02062F6218A33E8200C67D0D /* TransactionViewController.m in Sources */,
 				021944B218A294CD0044EC29 /* rscode.c in Sources */,
 				02EE7B6018A1F10E00174DAF /* ViewController.m in Sources */,
@@ -684,7 +698,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DWallet/DWallet-Prefix.pch";
 				INFOPLIST_FILE = "DWallet/DWallet-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/**",
@@ -712,7 +726,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DWallet/DWallet-Prefix.pch";
 				INFOPLIST_FILE = "DWallet/DWallet-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/**",

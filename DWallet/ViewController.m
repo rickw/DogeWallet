@@ -42,7 +42,8 @@
 @end
 
 @interface ViewController ()
-@property (nonatomic, strong)   NSNumberFormatter *formatter;
+@property (nonatomic, strong) NSNumberFormatter *formatter;
+@property (nonatomic, strong) UIImageView *coverView;
 @end
 
 @implementation ViewController
@@ -79,10 +80,19 @@
     [self createBalanceLabel];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+}
+
 -(void) viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
 	
 	[self refreshWallet];
+}
+
+- (BOOL)shouldAutorotate {
+    return NO;
 }
 
 -(void) refreshWallet {
