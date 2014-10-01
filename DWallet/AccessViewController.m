@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     _authenticated = NO;
-    self.edgesForExtendedLayout = NO;
+//    self.edgesForExtendedLayout = NO;
 
 }
 
@@ -31,6 +31,21 @@
 
 - (BOOL)shouldAutorotate {
     return NO;
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setHidden:YES];
+
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController.navigationBar setHidden:NO];
 }
 
 - (IBAction)touchIDAction:(id)sender {
