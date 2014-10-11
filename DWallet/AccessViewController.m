@@ -73,6 +73,7 @@
     } else {
         // Could not evaluate policy; look at authError and present an appropriate message to user
         NSLog(@"no policy");
+        [self performSegueWithIdentifier:@"pushViewController" sender:sender];
     }
 }
 
